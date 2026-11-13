@@ -67,6 +67,12 @@
       "skillPath": "skills/gestures/SKILL.md",
       "computedHash": "f3f78df0c0b320e9129e543106ce3b6ccd0cfb681b57ff38daaec7379993fe1a"
     },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "ba6f33350863bd8138de222e55a7bf0f409ed329770a92e3db7535cbd2d0fb80"
+    },
     "improve-animations": {
       "source": "emilkowalski/skills",
       "sourceType": "github",
