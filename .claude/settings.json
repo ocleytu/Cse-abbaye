@@ -1,13 +1,20 @@
 {
+  "enabledPlugins": {
+    "figma@claude-plugins-official": true,
+    "claude-obsidian@agricidaniel-claude-obsidian": true
+  },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
         "source": "github",
         "repo": "anthropics/claude-plugins-official"
       }
+    },
+    "agricidaniel-claude-obsidian": {
+      "source": {
+        "source": "github",
+        "repo": "AgriciDaniel/claude-obsidian"
+      }
     }
-  },
-  "enabledPlugins": {
-    "figma@claude-plugins-official": true
   }
 }
