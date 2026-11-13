@@ -1,7 +1,8 @@
 {
   "enabledPlugins": {
     "figma@claude-plugins-official": true,
-    "claude-obsidian@agricidaniel-claude-obsidian": true
+    "claude-obsidian@agricidaniel-claude-obsidian": true,
+    "claude-mem@thedotmack": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -14,6 +15,12 @@
       "source": {
         "source": "github",
         "repo": "AgriciDaniel/claude-obsidian"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
       }
     }
   }
