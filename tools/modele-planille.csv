@@ -1,0 +1,36 @@
+﻿section,statut,date,titre_fr,texte_fr,titre_en,texte_en,accueil
+agenda,a_annoncer,,Négociation annuelle (NAO),La réunion de négociation est reportée. La nouvelle date sera communiquée dès qu’elle sera connue.,Annual negotiation (NAO),The negotiation meeting is postponed. The new date will be shared as soon as it is known.,
+agenda,a_annoncer,,Prochaine réunion du CSE,"Points reportés, compte rendu du 22 octobre à voter. Date à confirmer.",Next CSE meeting,"Postponed items, 22 October minutes to be voted. Date to be confirmed.",
+agenda,a_annoncer,,Diagnostic amiante,"Le diagnostic de 43 pages est transmis au CSE avant la prochaine réunion, puis versé à la BDESE.",Asbestos survey,"The 43-page survey is sent to the CSE before the next meeting, then added to the BDESE database.",
+agenda,a_annoncer,,"Cadeaux, Noël et fête du personnel",Proposition de la Direction attendue. Rien n’est voté.,"Gifts, Christmas and staff party",Proposal expected from Management. Nothing is voted yet.,
+agenda,passe,2026-11-10,Réunion du CSE : 30 points,"Subventions reçues, assistance juridique adoptée à l’unanimité, local au bâtiment C, deux expertises présentées, plannings, heures, santé et sécurité.",CSE meeting: 30 items,"Funding received, legal assistance approved unanimously, office in building C, two expert studies presented, schedules, hours, health and safety.",
+agenda,passe,2026-10-31,Événement,Véhicule mis à disposition par la Direction.,Event,Vehicle provided by Management.,
+agenda,passe,2026-10-22,Réunion du CSE,Suite des demandes adressées à la direction.,CSE meeting,Follow-up on requests sent to Management.,
+agenda,passe,2026-09-30,Réunion avec la direction,"Pourboires, plannings, règlement intérieur, DUERP.",Meeting with Management,"Tips, schedules, internal rules, DUERP risk assessment.",
+agenda,passe,2026-09-11,Première réunion du CSE,"Ordre du jour de 18 points, comptes bancaires ouverts.",First CSE meeting,"An 18-item agenda, bank accounts opened.",
+avance,obtenu,,Subventions du CSE,Reçues pendant la réunion du 10 novembre.,CSE funding,Received during the 10 November meeting.,
+avance,obtenu,,Assistance juridique,Contrat adopté à l’unanimité des votants.,Legal assistance,Contract approved unanimously by those voting.,oui
+avance,obtenu,,Un local pour le CSE,"Bureau attribué au bâtiment C, 1er étage ; pas encore prêt, liste des travaux transmise au service technique.",A CSE office,"Room assigned in building C, 1st floor; not ready yet, list of works sent to the technical department.",oui
+avance,etude,,Pourboires,La Direction s’est engagée à les verser entre le 10 et le 15 de chaque mois.,Tips,Management has committed to pay them between the 10th and 15th of each month.,oui
+avance,obtenu,,Égalité salariale,"Aucune anomalie constatée, chez les employés comme chez les agents de maîtrise.",Pay equality,"No anomaly found, for employees and for supervisors.",
+avance,etude,,Carte Accor All Heartists,Diffusion par courriel pas encore faite : contactez le service RH.,Accor All Heartists card,E-mail not sent yet: contact HR.,oui
+avance,demande,,13e mois et augmentation de 5 %,"Pour tous, dans le cadre de la négociation annuelle (NAO).",13th month and 5 % raise,"For everyone, as part of the annual negotiation (NAO).",
+avance,demande,,Prime de partage de la valeur,Au plafond.,Profit-sharing bonus,At the legal ceiling.,
+avance,demande,,5e semaine de congés,Pour les salariés dont la famille est éloignée.,5th week of leave,For staff whose families live far away.,
+avance,demande,,Activités sociales,"Passer de 0,1 % à environ 0,8 %.",Social activities,From 0.1 % to about 0.8 %.,
+avance,demande,,Chèques-cadeaux de Noël,Pour tous. Le financement reste à définir.,Christmas gift vouchers,For everyone. Funding still to be defined.,
+avance,demande,,Jours non payés,"La Direction demande des cas concrets, avec les jours exacts concernés.",Unpaid days,"Management asks for concrete cases, with the exact days concerned.",
+avance,demande,,Salle de repos et distributeur d’eau,"Un lieu pour souffler entre deux services, de l’eau fraîche pour toutes les équipes.",Rest room and water dispenser,"A place to breathe between two services, fresh water for every team.",
+avance,etude,,Deux expertises,Cabinet DIAGORIS : des groupes de travail vont venir.,Two expert studies,Firm DIAGORIS: working groups are coming.,
+avance,etude,,Heures supplémentaires 2026,Récupération au 1er trimestre 2027.,2026 overtime,Recovery in the first quarter of 2027.,oui
+avance,etude,,Pointeuse,Inscrite au budget d’investissement 2027.,Time clock,Included in the 2027 investment budget.,
+avance,etude,,Cadeaux de fin d’année,Proposition attendue de la Direction.,Year-end gifts,Proposal expected from Management.,
+avance,etude,,Budget du CSE,La Direction s’est dite ouverte à une augmentation.,CSE budget,Management said it is open to an increase.,
+avance,etude,,Règlement intérieur du CSE,En cours de rédaction.,CSE internal rules,Being drafted.,
+avance,etude,,Loyers et logement,Dans le cadre de la NAO.,Rent and housing,Part of the NAO.,
+avance,etude,,Négociation annuelle (NAO),"En cours ; la réunion prévue est reportée, nouvelle date à venir.",Annual negotiation (NAO),"Under way; the planned meeting is postponed, new date to come.",oui
+avance,etude,,2e personne aux RH,Arrivée prévue le 23 novembre.,2nd person in HR,Expected on 23 November.,
+avance,etude,,DUERP,"Bientôt en PDF ; à compléter (risques psychosociaux), avec plan d’action et QR code.",DUERP,"Soon as a PDF; psychosocial risks to be added, with an action plan and QR code.",
+avance,etude,,Parking privé,Étude de l’installation d’une caméra.,Private car park,A camera is being studied.,
+avance,etude,,Livret d’accueil,En préparation.,Welcome booklet,In preparation.,
+avance,demande,,Places équipe de France,Un tirage au sort a été demandé.,France team tickets,A draw has been requested.,
