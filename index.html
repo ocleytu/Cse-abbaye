@@ -489,46 +489,6 @@ html body .shr .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-
 /* v3 — coins droits partout (identité de l’Abbaye) */
 html body .tile,html body .tiles .tile,html body .ag-ev,html body .ig-box,html body .gx-c,html body .ag-next,html body .ag-nd,html body .gx-top,html body .ag-date,html body .gx-tl li,html body .bn-so,html body .gsug,html body .gs.chatting .gsug,html body .gs-page .gsug,html body .gai,html body .gai::before,html body .gai-llm,html body .bn-flat,html body .tl-art img,html body .gr.pg,html body .page,html body .ag-q i,html body .ag-days i,html body .gm-u .gm-body,html body .view .gs .gbox,html body .gbox,html body .bn-ac,html body .ag-l,html body .ig-off,html body .ig-c,html body .bn-st,html body .bn-t,html body .bn-idea,html body .stv-card,html body .gflash{border-radius:0!important}
 html body footer .ft-upd{margin:14px 0 0;font:600 11px/1.4 var(--text);letter-spacing:.16em;text-transform:uppercase;color:rgba(252,249,245,.62)}
-
-/* v5 — titres en minuscules (Cormorant), majuscules réservées aux petits libellés */
-html body .view h1,html body .view h2,html body footer .ft-hero h2{text-transform:none!important;letter-spacing:-.005em!important}
-/* v5 — accueil plus court : « Le CSE en bref » en carrousel */
-html body .ed-car{padding:64px 0 56px;background:var(--surface,#FBF8F3)}
-html body .ed-car .ec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 20px;text-align:left}
-html body .ed-car .ec-h h2{margin:0!important;font-family:var(--display);font-weight:300;font-size:clamp(32px,8vw,52px)!important;line-height:1.05;text-align:left!important}
-html body .ed-car .ec-sw{flex:none;font:600 11px/1 var(--text);letter-spacing:.16em;text-transform:uppercase;opacity:.6}
-html body .ed-car .ec-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -28px 0 0;padding:0 28px 6px 0}
-html body .ed-car .ec-row::-webkit-scrollbar{display:none}
-html body .ed-car .ec{flex:0 0 84%;max-width:420px;scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;text-align:left;margin:0}
-html body .ed-car .ec-ph{margin:0;aspect-ratio:4/3;overflow:hidden}
-html body .ed-car .ec-ph img{width:100%;height:100%;object-fit:cover;display:block}
-html body .ed-car .ec-b{display:flex;flex-direction:column;gap:12px;padding:22px 20px 24px;flex:1}
-html body .ed-car .ec-b h3{margin:0;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15;text-transform:none!important;letter-spacing:0!important;text-align:left!important}
-html body .ed-car .ec-b p{margin:0;font-size:16px;line-height:1.55;text-align:left!important}
-html body .ed-car .ec-bt{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;padding-top:6px}
-html body .ed-car .ec-c{background:var(--hotel,#1C4220);color:#FCF9F5}
-html body .ed-car .ec-c .edb{background:#FCF9F5!important;color:#1C4220!important;border-color:#FCF9F5!important}
-html body .ed-car .ec-fg{display:grid;gap:14px;margin:6px 0}html body .ed-car .ec-fg,html body .ed-car .ec-fg *{text-align:left!important}html body .ed-car .ec-c h3,html body .ed-car .ec-c p,html body .ed-car .ec-c .ec-n,html body .ed-car .ec-c span{color:#FCF9F5!important}
-html body .ed-car .ec-fg b{display:block;font-family:var(--display);font-weight:300;font-size:54px;line-height:1;color:#D9C27A}
-html body .ed-car .ec-fg span{display:block;font-size:15px;line-height:1.45;opacity:.9}
-html body .ed-car .ec-n{font-style:italic;font-size:14px!important;opacity:.8}
-@media(min-width:900px){html body .ed-car .ec-row{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}html body .ed-car .ec{max-width:none}html body .ed-car .ec-sw{display:none}}
-/* v5 — « Le chiffre de la semaine » : cartes côte à côte au lieu d’empilées */
-@media(max-width:899px){html body .pulse .pl-g{display:flex!important;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:-28px;padding-right:28px;grid-template-columns:none!important}html body .pulse .pl-g::-webkit-scrollbar{display:none}html body .pulse .pl{flex:0 0 84%;scroll-snap-align:start;margin:0!important}}
-/* v5 — bureau du CSE : portraits compacts à côté du texte (mobile) */
-@media(max-width:759px){
- html body #v-accueil #bureau .people,html body #v-en #en-team-home .people{display:grid!important;gap:14px!important}
- html body #v-accueil #bureau .person,html body #v-en #en-team-home .person{display:grid!important;grid-template-columns:88px 1fr;gap:0 16px;align-items:start;padding:18px 16px!important;text-align:left!important}
- html body #v-accueil #bureau .person .pic,html body #v-en #en-team-home .person .pic{width:88px!important;height:110px!important;margin:0!important;aspect-ratio:auto!important;overflow:hidden}
- html body #v-accueil #bureau .person .pic img,html body #v-en #en-team-home .person .pic img{width:100%!important;height:100%!important;object-fit:cover;object-position:50% 15%}
- html body #v-accueil #bureau .person .bd,html body #v-en #en-team-home .person .bd{text-align:left!important;padding:0!important;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
- html body #v-accueil #bureau .person .bd *,html body #v-en #en-team-home .person .bd *{text-align:left!important}
- html body #v-accueil #bureau .person h3,html body #v-en #en-team-home .person h3{margin:0!important;font-size:24px!important}
- html body #v-accueil #bureau .person p,html body #v-en #en-team-home .person p{margin:0!important;font-size:15px!important;line-height:1.45!important}
- html body #v-accueil #bureau .person .sp,html body #v-en #en-team-home .person .sp{display:none!important}
- html body #v-accueil #bureau .person .btn,html body #v-en #en-team-home .person .btn{margin-top:6px!important;min-height:42px!important;padding:0 14px!important;font-size:11px!important}
- html body #v-accueil #bureau .person .addr,html body #v-en #en-team-home .person .addr{font-size:12px;word-break:break-all;justify-content:flex-start!important}
-}
 </style>
 
 <a class="skip" href="#app">Aller au contenu</a>
@@ -781,12 +741,9 @@ function edi(en){
   d:["Une idée ? Dites-la.","Anonyme, en une minute. Chaque idée est lue en réunion du CSE.","Ouvrir la boîte à idées","Faire une demande","demande"]
  };
  var a=T.a,b=T.b,c=T.c,d=T.d,h=function(r){return"#"+r};
- var cg=en?["The CSE at a glance","Swipe"]:["Le CSE en bref","Faites glisser"];
- return'<section class="ed-car" aria-label="'+cg[0]+'"><div class="wrap"><div class="ec-h"><h2>'+cg[0]+'</h2><span class="ec-sw">'+cg[1]+' ›</span></div><div class="ec-row">'
- +'<article class="ec ec-a"><figure class="ec-ph"><img alt="" loading="lazy" src="'+EDI.lib+'"></figure><div class="ec-b"><h3>'+a[0]+'</h3><p>'+a[1]+'</p><div class="ec-bt"><a class="edb" href="'+h(a[5])+'" data-r="'+a[5]+'">'+a[3]+'</a><a class="lnk" href="'+h(a[6])+'" data-r="'+a[6]+'">'+a[4]+' '+I.arrow+'</a></div></div></article>'
- +'<article class="ec ec-s"><figure class="ec-ph"><img alt="" loading="lazy" src="'+IMG_CARD+'"></figure><div class="ec-b"><h3>'+b[0]+'</h3><p>'+b[1]+'</p><div class="ec-bt"><a class="edb" href="'+h(b[4])+'" data-r="'+b[4]+'">'+b[3]+'</a></div></div></article>'
- +'<article class="ec ec-c"><div class="ec-b"><h3>'+c[0]+'</h3><div class="ec-fg"><div><b>0'+(en?".":",")+'20&nbsp;%</b><span>'+c[1]+'</span></div><div><b>≈&nbsp;0'+(en?".":",")+'8&nbsp;%</b><span>'+c[2]+'</span></div></div><p class="ec-n">'+c[3]+'</p><div class="ec-bt"><a class="edb" href="'+h(c[5])+'" data-r="'+c[5]+'">'+c[4]+'</a></div></div></article>'
- +'</div></div></section>'
+ return'<section class="ed ed-a"><div class="wrap"><h2>'+a[0]+'</h2><figure class="ed-ph"><img alt="" loading="lazy" src="'+EDI.lib+'"></figure><div class="ed-tx"><p>'+a[1]+'</p><p>'+a[2]+'</p></div><div class="ed-bt"><a class="edb" href="'+h(a[5])+'" data-r="'+a[5]+'">'+a[3]+'</a><a class="edb" href="'+h(a[6])+'" data-r="'+a[6]+'">'+a[4]+'</a></div></div></section>'
+ +'<section class="ed ed-s"><div class="wrap"><h2>'+b[0]+'</h2><figure class="ed-ph"><img alt="" loading="lazy" src="'+IMG_CARD+'"></figure><div class="ed-tx"><p>'+b[1]+'</p><p>'+b[2]+'</p></div><div class="ed-bt"><a class="edb" href="'+h(b[4])+'" data-r="'+b[4]+'">'+b[3]+'</a></div></div></section>'
+ +'<section class="ed ed-c"><div class="wrap"><h2>'+c[0]+'</h2><div class="ed-fg"><div><b>0'+(en?".":",")+'20&nbsp;%</b><span>'+c[1]+'</span></div><div><b>≈&nbsp;0'+(en?".":",")+'8&nbsp;%</b><span>'+c[2]+'</span></div></div><div class="ed-tx"><p>'+c[3]+'</p></div><div class="ed-bt"><a class="edb" href="'+h(c[5])+'" data-r="'+c[5]+'">'+c[4]+'</a></div></div></section>'
  +'<section class="ed ed-id" style="background-image:url('+IMG_TOILE+')"><div class="id-card"><span class="id-eb" data-in style="--i:0">'+(en?"Idea box":"Boîte à idées")+'</span><h2 data-in style="--i:1">'+d[0].replace(/(Dites-la\.|Tell us\.)/,"<em>$1</em>")+'</h2><p class="id-p" data-in style="--i:2">'+d[1]+'</p><div class="id-bt"><a class="id-b1" href="'+FORM+'" '+EXT+'>'+d[2]+'</a><a class="id-b2" href="'+h(d[4])+'" data-r="'+d[4]+'">'+d[3]+'</a></div></div></section>'
 }
 
