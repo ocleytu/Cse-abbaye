@@ -549,6 +549,19 @@ html body .view .mz-tl.mz-anim>li.lit{opacity:1}
 html body .view .mz-tl.mz-anim>li.lit::before{transform:rotate(45deg) scale(1)!important}
 #res .res-q{width:58px;height:58px;margin:0 auto 18px;background:conic-gradient(from -90deg,#D9C27A var(--a),transparent 0);-webkit-mask:var(--q) center/contain no-repeat;mask:var(--q) center/contain no-repeat;animation:qDraw 1s cubic-bezier(.65,0,.35,1) .15s both}
 @media(prefers-reduced-motion:reduce){#spl{display:none}#res .res-q{animation:none;--a:360deg}}
+
+/* v8 — animations : gravures à l'encre, titres par ligne, calendrier, zoom lent */
+html body .ink-w{-webkit-mask-image:linear-gradient(180deg,#000 42%,transparent 58%);mask-image:linear-gradient(180deg,#000 42%,transparent 58%);-webkit-mask-size:100% 260%;mask-size:100% 260%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 100%;mask-position:0 100%;opacity:.35;transition:-webkit-mask-position 1.5s cubic-bezier(.45,.05,.25,1),mask-position 1.5s cubic-bezier(.45,.05,.25,1),opacity 1.2s ease}
+html body .ink-w.ink-in{-webkit-mask-position:0 0;mask-position:0 0;opacity:1}
+html body .ln-o{display:block;overflow:hidden;padding:.08em 0 .14em;margin:-.08em 0 -.14em}
+html body .ln-i{display:block;transform:translateY(108%);transition:transform 1.05s cubic-bezier(.22,1,.36,1)}
+html body .ln-w.ln-in .ln-i{transform:none}
+html body .ag-days.cal i.on{background:var(--surface);color:var(--ink-2)}
+html body .ag-days.cal.go i.on{animation:cseDay .8s cubic-bezier(.22,1,.36,1) calc(var(--k,0) * 170ms + 250ms) both}
+@keyframes cseDay{0%{background:var(--surface);color:var(--ink-2);transform:scale(1)}45%{background:#D9C27A;color:#1C4220;transform:scale(1.18)}100%{background:var(--accent);color:#fff;transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){html body .view .hero img{animation:heroImg 1.6s var(--ease) both,cseDrift 26s cubic-bezier(.25,.4,.35,1) 1.6s forwards}}
+@keyframes cseDrift{from{transform:scale(1)}to{transform:scale(1.07)}}
+html body .ed-id.plx{background-size:var(--bs,cover)!important;background-position:center calc(50% + var(--py,0px))!important}
 </style>
 
 <script>(function(){try{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var k="cse_spl",d=new Date().toDateString();if(localStorage.getItem(k)===d)return;localStorage.setItem(k,d)}catch(e){return}
@@ -1898,6 +1911,36 @@ show(location.hash.slice(1)||"accueil");
  var t=0;new MutationObserver(function(){if(t)return;t=requestAnimationFrame(function(){t=0;scan()})}).observe(document.getElementById("app")||document.body,{childList:true,subtree:true});
 })();
 </script>
+<script>
+/* v8 — animations */
+(function(){
+ if(matchMedia("(prefers-reduced-motion:reduce)").matches||!("IntersectionObserver" in window))return;
+ var RV=".tile,.gx-c,.gx-top,.ag-ev,.ag-next,.art.nw,.bn-t,.bn-st,.ig-c,.ig-box,.ig-off,.mem figure,.person,.doc,.figs>*,.bn-ac,.panel,.bn-idea,.stv,footer,.hero";
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;io.unobserve(el);
+   if(el.classList.contains("ink-w"))el.classList.add("ink-in");
+   else if(el.classList.contains("ln-w"))el.classList.add("ln-in");
+   else if(el.classList.contains("cal"))el.classList.add("go")})},{rootMargin:"0px 0px -8% 0px",threshold:.15});
+ function scan(){
+  document.querySelectorAll(".shortcuts .sc-g,.view img.mz-e").forEach(function(im){if(im.dataset.ink)return;im.dataset.ink="1";im.classList.add("ink-w");io.observe(im)});
+  document.querySelectorAll(".view h2").forEach(function(h){if(h.dataset.ln||h.closest(RV))return;h.dataset.ln="1";if(!h.textContent.trim())return;h.innerHTML='<span class="ln-o"><span class="ln-i">'+h.innerHTML+'</span></span>';h.classList.add("ln-w");io.observe(h)});
+  document.querySelectorAll(".ag-days").forEach(function(d){if(d.dataset.cal)return;d.dataset.cal="1";var k=0;[].forEach.call(d.children,function(i){if(i.classList.contains("on"))i.style.setProperty("--k",k++)});d.classList.add("cal");io.observe(d)});
+ }
+ setTimeout(scan,80);setTimeout(scan,600);
+ var t=0;new MutationObserver(function(){if(t)return;t=requestAnimationFrame(function(){t=0;scan()})}).observe(document.getElementById("app")||document.body,{childList:true,subtree:true});
+ /* toile de Jouy : parallaxe douce */
+ var R=0,src=null,q=0;
+ function plx(){q=0;document.querySelectorAll(".view.on .ed-id").forEach(function(el){
+   if(!src){var m=(el.style.backgroundImage||"").match(/url\(["']?(.*?)["']?\)/);if(!m)return;src=new Image();src.onload=function(){R=src.naturalWidth/src.naturalHeight;plx()};src.src=m[1];return}
+   if(!R)return;var r=el.getBoundingClientRect();if(r.bottom<-50||r.top>innerHeight+50)return;
+   var ex=110,w=r.width,h=r.height+ex,bw=Math.max(w,h*R),bh=bw/R;
+   el.style.setProperty("--bs",Math.ceil(bw)+"px "+Math.ceil(bh)+"px");
+   var p=((r.top+r.height/2)-innerHeight/2)/(innerHeight/2+r.height/2);p=Math.max(-1,Math.min(1,p));
+   el.style.setProperty("--py",(p*ex*.45).toFixed(1)+"px");el.classList.add("plx")})}
+ function req(){if(!q)q=requestAnimationFrame(plx)}
+ addEventListener("scroll",req,{passive:true});addEventListener("resize",req);addEventListener("hashchange",function(){setTimeout(req,60)});setTimeout(req,200);
+})();
+</script>
+
 <script>
 (function(){try{var f=document.querySelector("footer.ft"),d=document.getElementById("dock");if(!f||!d||!window.IntersectionObserver)return;
 new IntersectionObserver(function(e){d.classList.toggle("ft-hide",e[0].isIntersecting)},{threshold:0.15}).observe(f)}catch(x){}})();
